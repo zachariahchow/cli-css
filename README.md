@@ -61,5 +61,5 @@ This example gives the result of `cat` to your program.
 
 ```bash
 
-node index.js rgb $(cat colors.txt)
+node index.js hex $(cat colors.txt)
 ```
