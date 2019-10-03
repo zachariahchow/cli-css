@@ -63,3 +63,8 @@ This example gives the result of `cat` to your program.
 
 node index.js hex $(cat colors.txt)
 ```
+
+### Further
+Give your program the ability to calculate more information about colors.
+
+Output other color harmonies given an input: https://dev.to/benjaminadk/make-color-math-great-again--45of
