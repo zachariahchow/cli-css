@@ -19,6 +19,10 @@ Will print out:
 rgb( 255, 255, 255 )
 ```
 
+### Getting started
+
+Create an `index.js` file. Run it with `node index.js`.
+
 ### Further
 Create the functionality to put in 3 number values and get out the hex color.
 
@@ -34,7 +38,10 @@ Will print out:
 ```
 
 ### Further
-Add HSL.
+Separate your conversion functions out into separate module file(s).
+
+### Further
+Add HSL colors.
 
 If the user puts in a hex color, print out the rgb and hsl values.
 
