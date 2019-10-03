@@ -11,7 +11,7 @@ Create a function that converts from hex colors to rgb colors.
 
 Write a nodejs command line program that takes a hex color as an argument and returns the rbg CSS value.
 ```bash
-$ node index.js fffff
+$ node index.js #ffffff
 ```
 
 Will print out:
