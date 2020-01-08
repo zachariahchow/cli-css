@@ -4,8 +4,9 @@
 
 Convert colors using the command line.
 
-
 Create a function that converts from hex colors to rgb colors.
+
+(just copy and paste the answer from this stackoverflow question)
 
 [https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb](https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb)
 
