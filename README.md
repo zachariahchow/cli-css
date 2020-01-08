@@ -48,7 +48,7 @@ If the user puts in a hex color, print out the rgb and hsl values.
 If the user puts in a rgb value, print out the hsl an d hex values.
 
 ### Further
-Color the output using bash colors:
+Color the output using bash colors: (note this doesn't work on all terminals!)
 
 ```js
 
