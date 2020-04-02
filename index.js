@@ -9,32 +9,42 @@ let hexArgs = args.slice(1);
 
 const colorCodeConverter = () => {
 
-    switch (args[0].toLowerCase()) {
+        switch (args[0].toLowerCase()) {
 
-        case 'rgb':
-                return `${rgbModule.rgbToHex(...rgbAndHslArgs)}\n${rgbModule.rgbToHsl(...rgbAndHslArgs)})`;
-            break;
+            case 'rgb':
+                    return `${rgbModule.rgbToHex(...rgbAndHslArgs)}\n${rgbModule.rgbToHsl(...rgbAndHslArgs)})`;
+                break;
 
-        case 'hex':
-            return `${hexModule.hexToRgb(hexArgs[0])})\n${hexModule.hexToHsl(hexArgs[0])})`;
-            break;
+            case 'hex':
+                return `${hexModule.hexToRgb(hexArgs[0])})\n${hexModule.hexToHsl(hexArgs[0])})`;
+                break;
 
-        case 'hexall':
-            const hexArgsArray = [];
+            case 'hexall':
 
-            for (let i = 0; i < hexArgs.length; i++) {
-                console.log((`${hexArgs[i]}\n${hexModule.hexToRgb(hexArgs[i])})\n${hexModule.hexToHsl(hexArgs[i])}\n\n`))
-            };
-            break;
+                // for (let i = 0; i < hexArgs.length; i++) {
+                //     console.log((`${hexArgs[i]}\n${hexModule.hexToRgb(hexArgs[i])})\n${hexModule.hexToHsl(hexArgs[i])}\n\n`))
+                // };
 
-        case 'hsl':
-            return `${hslModule.hslToRgb(...rgbAndHslArgs)}\n${hslModule.hslToHex(...rgbAndHslArgs)}`;
-            break;
+                // hexArgs.forEach(code => console.log(`${code}\n${hexModule.hexToRgb(code)})\n${hexModule.hexToHsl(code)}\n\n`));
 
-        default:
-            return `First argument must be 'rgb', 'hex' or 'hsl'`
+                let hexString = "";
 
-    }
+                for (const code of hexArgs) {
+                    hexString = hexString.concat((`${code}\n${hexModule.hexToRgb(code)})\n${hexModule.hexToHsl(code)}\n\n`));
+                }
+
+                return hexString;
+
+                break;
+
+            case 'hsl':
+                return `${hslModule.hslToRgb(...rgbAndHslArgs)}\n${hslModule.hslToHex(...rgbAndHslArgs)}`;
+                break;
+
+            default:
+                return `First argument must be 'rgb', 'hex' or 'hsl' followed by appropriate values. Pass 'hexall' as first argument to parse files containing more than one hex code.`
+
+        }
 }
 
 console.log(colorCodeConverter());
