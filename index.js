@@ -9,6 +9,8 @@ let hexArgs = args.slice(1);
 
 const colorCodeConverter = () => {
 
+    if (args[0] && args[1]) {
+
         switch (args[0].toLowerCase()) {
 
             case 'rgb':
@@ -45,6 +47,10 @@ const colorCodeConverter = () => {
                 return `First argument must be 'rgb', 'hex' or 'hsl' followed by appropriate values. Pass 'hexall' as first argument to parse files containing more than one hex code.`
 
         }
+
+    } else {
+        return `Please enter valid arguments.`
+    }
 }
 
 console.log(colorCodeConverter());
